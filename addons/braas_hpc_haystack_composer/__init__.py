@@ -30,22 +30,16 @@ bl_info = {
 def register():
     from . import haystack_pref
     from . import haystack_nodes
-    from . import haystack_scene
 
     haystack_pref.register()
     haystack_nodes.register()
-    haystack_scene.register()
-    
 
 def unregister():
     from . import haystack_pref
     from . import haystack_nodes
-    from . import haystack_scene
     
     try:        
         haystack_pref.unregister()
         haystack_nodes.unregister()
-        haystack_scene.unregister()
-
     except RuntimeError:
         pass 
